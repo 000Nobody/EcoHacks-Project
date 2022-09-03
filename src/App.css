@@ -1,5 +1,10 @@
+
+
 .App {
   text-align: center;
+  background-image: url("./images/earth-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .App-logo {
@@ -14,9 +19,50 @@
 }
 
 .App-header {
+  font-family: 'Courier New';
+  font-weight: bold;
+  color: lightgreen;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 80px;
+  /*font-size: calc(10px + 2vmin);*/
+  height: 450px;
 }
+
+
+.route {
+  float: left;
+  text-align: center;
+  width: 30%;
+  height: 1200px;
+  background-color: lightgreen;
+}
+
+.route-title {
+  padding: 20px;
+  font-size: 50px;
+}
+
+label {
+  font-size: 40px;
+  padding: 20px;
+}
+
+input {
+  font-size: 40px;
+}
+
+.carbon-footprint-title {
+  font-size: 50px;
+  color: brown;
+} /*Not working??*/
+
+.carbon-footprint {
+  color: brown;
+  font-size: 70px;
+}
+
+
+

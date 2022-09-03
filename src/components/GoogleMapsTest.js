@@ -2,8 +2,9 @@ import React from 'react'
 import { Autocomplete, GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 
 const containerStyle = {
-  width: '100%',
-  height: '1000px'
+  width: '70%',
+  height: '1200px',
+  float: 'right'
 };
 
 /*
