@@ -7,6 +7,13 @@ const containerStyle = {
   alignItems: 'center'
 };
 
+/*
+//returns pounds of CO2 emitted
+function C02Conv(miles,gasMilage) {
+  let gallons = miles/gasMileage;
+  return gallons * 20;
+}*/
+
 const center = {
   lat: -3.745,
   lng: -38.523
