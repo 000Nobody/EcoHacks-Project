@@ -1,5 +1,6 @@
 import './App.css';
 
+
 import GoogleMapsTest from "./components/GoogleMapsTest"
 
 function App() {
@@ -8,6 +9,8 @@ function App() {
       <header className="App-header">
         Eco Hacks Project
       </header>
+      <h1>ROUTE</h1>
+
       <GoogleMapsTest />
     </div>
   );
