@@ -1,10 +1,17 @@
 import React from 'react'
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+import { Autocomplete, GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 
 const containerStyle = {
-  width: '400px',
-  height: '400px'
+  width: '100%',
+  height: '1000px'
 };
+
+/*
+//returns pounds of CO2 emitted
+function C02Conv(miles,gasMilage) {
+  let gallons = miles/gasMileage;
+  return gallons * 20;
+}*/
 
 const center = {
   lat: -3.745,
@@ -14,7 +21,7 @@ const center = {
 function GoogleMapsTest() {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: " "
+    googleMapsApiKey: "AIzaSyAWJtQDKBH-pWcSdqeuTiGIijpxHDqY8bs"
   })
 
   const [map, setMap] = React.useState(null)
