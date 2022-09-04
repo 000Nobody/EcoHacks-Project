@@ -64,5 +64,9 @@ input {
   font-size: 70px;
 }
 
-
+button {
+  width: 30%;
+  height: 40px;
+  font-size: 2rem;
+}
 
