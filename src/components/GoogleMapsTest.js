@@ -26,7 +26,7 @@ const center = {
   return
 }
 */
-function GoogleMapsTest() {
+export function GoogleMapsTest() {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: "AIzaSyAWJtQDKBH-pWcSdqeuTiGIijpxHDqY8bs",
@@ -52,19 +52,6 @@ function GoogleMapsTest() {
 
   return isLoaded ? (
     <flex>
-       <h2>
-      <form id="route-form">
-          <label for="starting-point">Starting Point: </label>
-          <Autocomplete>
-            <input type="text" placeholder='start' ref={startLoc}></input>
-          </Autocomplete>
-          <br></br>
-          <label for="destination">Destination: </label>
-          <Autocomplete>
-          <input type="text" placeholder='end' ref={endLoc}></input>
-          </Autocomplete>
-        </form>
-      </h2>
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}

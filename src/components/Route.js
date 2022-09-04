@@ -1,14 +1,22 @@
-const Route = () => {
+import {Autocomplete} from '@react-google-maps/api';
+import React, { useRef } from 'react';
+
+
+export function Route() {
+
+  const startLoc=useRef()
+  const endLoc=useRef()
+
   return (
     <div className = "route">
         <h1 className ="route-title">ROUTE</h1>
         <form id="route-form">
           <label for="starting-point">Starting Point: </label>
-          <input type="text" id="starting-point" required></input>
+          <Autocomplete><input type="text" id="starting-point" placeholder = "start" ref={startLoc} required></input></Autocomplete>
           <br />
           <br />
           <label for="destination">Destination: </label>
-          <input type="text" id="destination" required></input>
+          <Autocomplete><input type="text" id="destination" placeholder="end" ref ={endLoc} required></input></Autocomplete>
         </form>
         <div className = "carbon-info">
             <h1 className = "carbon-footprint-title">Carbon Footprint</h1>
