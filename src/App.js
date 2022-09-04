@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
         <header className="App-header">
-          Eco Hacks Project
+          CarbonCalc
         </header>
         <Route />
         <GoogleMapsTest />
