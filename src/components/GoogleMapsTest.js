@@ -8,9 +8,10 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 0,
-  lng: 0
-};
+  lat: 38.897957,
+  lng: -77.036560
+ };
+ 
 
 export function GoogleMapsTest() {
   const { isLoaded } = useJsApiLoader({
@@ -29,6 +30,8 @@ export function GoogleMapsTest() {
   const onUnmount = React.useCallback(function callback(map) {
     setMap(null)
   }, [])
+
+  map.setZoom(3);
 
 
   return isLoaded ? (

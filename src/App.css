@@ -54,10 +54,16 @@ input {
   font-size: 40px;
 }
 
-.carbon-footprint-title {
-  font-size: 50px;
-  color: brown;
+/*.carbon-footprint-title {
+ font-size: 50px;
+ color: brown;
 } /*Not working??*/
+.carbon-info {
+  text-align: center;
+  padding: 20px 30px;
+  font-size: 20px;
+ }
+ 
 
 .carbon-footprint {
   color: brown;
