@@ -1,19 +1,37 @@
-import {Autocomplete} from '@react-google-maps/api';
-/*import { findAllByDisplayValue } from '@testing-library/react'; need this??*/
-import React, { useRef } from 'react';
+import { Autocomplete } from '@react-google-maps/api';
+import React, { useState } from 'react';
 
+async function getCarbonEmmission(start, end) {
+
+  const directionService = new window.google.maps.DirectionsService()
+  let results = await directionService.route({
+    origin: start,
+    destination: end,
+    travelMode: window.google.maps.TravelMode.DRIVING
+  })
+
+  const distance = results.routes[0].legs[0].distance.value;
+  alert("By taking this route, you would be emmitting " + calcCarbonEmmission(distance) + " grams of CO2 into the atmosphere.");
+
+}
+
+function calcCarbonEmmission(distance) {
+  const distanceMeters = distance
+  const distanceMiles = distanceMeters / 1609;
+  const gallonsUsed = distanceMiles / 22; // assuming the car has 22mpg
+  const co2Emitted = gallonsUsed * 8887; // grams of co2 
+
+  return co2Emitted.toString();
+
+}
 
 const Route = () => {
-
-  const startLoc=useRef();
-  const endLoc=useRef();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const start = document.getElementById("starting-point").value;
     const end = document.getElementById("destination").value;
-    alert("Hello! \n Start: " + start + " End: " + end);
-    /*Call function here using start and end maybe*/
+    getCarbonEmmission(start, end)
   };
 
   return (
@@ -21,11 +39,11 @@ const Route = () => {
         <h1 className ="route-title">ROUTE</h1>
         <form id="route-form" onSubmit={handleSubmit}>
           <label for="starting-point">Starting Point: </label>
-          <Autocomplete><input type="text" id="starting-point" placeholder = "start" ref={startLoc} required></input></Autocomplete>
+          <Autocomplete><input type="text" id="starting-point" placeholder = "start" required></input></Autocomplete>
           <br />
           <br />
           <label for="destination">Destination: </label>
-          <Autocomplete><input type="text" id="destination" placeholder="end" ref ={endLoc} required></input></Autocomplete>
+          <Autocomplete><input type="text" id="destination" placeholder="end" required></input></Autocomplete>
           <br />
           <button type="submit" id="submit">Submit </button>
         </form>
@@ -36,14 +54,5 @@ const Route = () => {
     </div>
   )
 }
-/*
-const footprint = document.getElementById('carbon-footprint');
-
-const generateFootprint = (miles,gasMileage) => {
-  let gallons = miles/gasMileage;
-  footprint.textContent = gallons * 20;
-}
-
-generateFootprint(50,80);*/
 
 export default Route
