@@ -28,7 +28,7 @@
   justify-content: center;
   font-size: 80px;
   /*font-size: calc(10px + 2vmin);*/
-  height: 450px;
+  height: 300px;
 }
 
 
@@ -38,6 +38,7 @@
   width: 30%;
   height: 1200px;
   background-color: lightgreen;
+  margin-top: 244px;
 }
 
 .route-title {

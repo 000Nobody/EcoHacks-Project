@@ -17,7 +17,7 @@ const Route = () => {
     </div>
   )
 }
-
+/*
 const footprint = document.getElementById('carbon-footprint');
 
 const generateFootprint = (miles,gasMileage) => {
@@ -25,6 +25,6 @@ const generateFootprint = (miles,gasMileage) => {
   footprint.textContent = gallons * 20;
 }
 
-generateFootprint(50,80);
+generateFootprint(50,80);*/
 
 export default Route
