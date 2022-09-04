@@ -15,8 +15,8 @@ function C02Conv(miles,gasMilage) {
 }*/
 
 const center = {
-  lat: -3.745,
-  lng: -38.523
+  lat: 0,
+  lng: 0
 };
 /*function calculatingRoute(){
   if(startLoc.current.value===''||endLoc.current.value===''){
@@ -55,7 +55,7 @@ export function GoogleMapsTest() {
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={10}
+        zoom={3}
         onLoad={onLoad}
         onUnmount={onUnmount}
         options={{
